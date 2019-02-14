@@ -1,0 +1,87 @@
+<%= form_for(employee) do |f| %>
+  <% if employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :employee_code %>
+    <%= f.number_field :employee_code %>
+  </div>
+
+  <div class="field">
+    <%= f.label :employee_id %>
+    <%= f.number_field :employee_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :prefix %>
+    <%= f.text_field :prefix %>
+  </div>
+
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :emp_mode %>
+    <%= f.text_field :emp_mode %>
+  </div>
+
+  <div class="field">
+    <%= f.label :role %>
+    <%= f.text_field :role %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :department %>
+    <%= f.text_field :department %>
+  </div>
+
+  <div class="field">
+    <%= f.label :reporting_manager %>
+    <%= f.text_field :reporting_manager %>
+  </div>
+
+  <div class="field">
+    <%= f.label :job_title %>
+    <%= f.text_field :job_title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :exprerience %>
+    <%= f.text_area :exprerience %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tel %>
+    <%= f.number_field :tel %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
