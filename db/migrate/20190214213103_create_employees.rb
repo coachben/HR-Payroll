@@ -3,7 +3,7 @@ class CreateEmployees < ActiveRecord::Migration[5.0]
     create_table :employees do |t|
       t.integer :employee_code
       t.integer :employee_id
-      t.string :prefix ,default:
+      t.string :prefix
       t.string :first_name
       t.string :last_name
       t.string :emp_mode
