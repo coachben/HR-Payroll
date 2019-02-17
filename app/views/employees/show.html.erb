@@ -1,74 +1,87 @@
+<div class="row">
+ <div class="panel panel-default">
+  <div class="panel-heading" >Employee: <%= @employee.first_name %> <%= @employee.last_name %> </div>
+    <div class="panel-body">
+        <p>
+          <strong>Employee code:</strong>
+          <%= @employee.employee_code %>
+        </p>
+        
+        <p>
+          <strong>Employee:</strong>
+          <%= @employee.employee_id %>
+        </p>
+        
+        <p>
+          <strong>Prefix:</strong>
+          <%= @employee.prefix %>
+        </p>
+        
+        <p>
+          <strong>First name:</strong>
+          <%= @employee.first_name %>
+        </p>
+        
+        <p>
+          <strong>Last name:</strong>
+          <%= @employee.last_name %>
+        </p>
+        
+        <p>
+          <strong>Emp mode:</strong>
+          <%= @employee.emp_mode %>
+        </p>
+        
+        <p>
+          <strong>Role:</strong>
+          <%= @employee.role %>
+        </p>
+        
+        <p>
+          <strong>Email:</strong>
+          <%= @employee.email %>
+        </p>
+        
+        <p>
+          <strong>Department:</strong>
+          <%= @employee.department %>
+        </p>
+        
+        <p>
+          <strong>Reporting manager:</strong>
+          <%= @employee.reporting_manager %>
+        </p>
+        
+        <p>
+          <strong>Job title:</strong>
+          <%= @employee.job_title %>
+        </p>
+        
+        <p>
+          <strong>Exprerience:</strong>
+          <%= @employee.exprerience %>
+        </p>
+        
+        <p>
+          <strong>Tel:</strong>
+          <%= @employee.tel %>
+        </p>
+        
+        <p>
+          <strong>Status:</strong>
+          <%= @employee.status %>
+    </p>
+
+    </div>
+    
+    <div class="panel-footer"> 
+
+            <%= link_to 'Edit', edit_employee_path(@employee) , class: 'btn btn-success'%> |
+            <%= link_to 'Back', employees_path ,class: 'btn btn-warning'%> |
+            <%= link_to 'Print', employees_path ,class: 'btn btn-info'%>
+    </div>
+  </div>
+ </div>
 
 
-<p>
-  <strong>Employee code:</strong>
-  <%= @employee.employee_code %>
-</p>
 
-<p>
-  <strong>Employee:</strong>
-  <%= @employee.employee_id %>
-</p>
-
-<p>
-  <strong>Prefix:</strong>
-  <%= @employee.prefix %>
-</p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @employee.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @employee.last_name %>
-</p>
-
-<p>
-  <strong>Emp mode:</strong>
-  <%= @employee.emp_mode %>
-</p>
-
-<p>
-  <strong>Role:</strong>
-  <%= @employee.role %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @employee.email %>
-</p>
-
-<p>
-  <strong>Department:</strong>
-  <%= @employee.department %>
-</p>
-
-<p>
-  <strong>Reporting manager:</strong>
-  <%= @employee.reporting_manager %>
-</p>
-
-<p>
-  <strong>Job title:</strong>
-  <%= @employee.job_title %>
-</p>
-
-<p>
-  <strong>Exprerience:</strong>
-  <%= @employee.exprerience %>
-</p>
-
-<p>
-  <strong>Tel:</strong>
-  <%= @employee.tel %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @employee.status %>
-</p>
-
-<%= link_to 'Edit', edit_employee_path(@employee) %> |
-<%= link_to 'Back', employees_path %>

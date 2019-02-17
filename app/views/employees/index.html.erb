@@ -1,62 +1,63 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-<div class="col-md-8 col-md-offset-2" >
-<div class="panel panel-default">
+ <div class="panel panel-default">
   <div class="panel-heading">Employees</div>
-  <div class="panel-body">
-    <table table-striped table-hover>
-      <thead>
-        <tr>
-          <th>Employee code</th>
-          <th>Employee ID:</th>
-          <th>Prefix</th>
-          <th>First name</th>
-          <th>Last name</th>
-          <th>Emp mode</th>
-          <th>Role</th>
-          <th>Email</th>
-          <th>Department</th>
-          <th>Reporting manager</th>
-          <th>Job title</th>
-          <th>Exprerience</th>
-          <th>Tel</th>
-          <th>Status</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-    
-      <tbody>
-        <% @employees.each do |employee| %>
-          <tr>
-            <td><%= employee.employee_code %></td>
-            <td><%= employee.employee_id %></td>
-            <td><%= employee.prefix %></td>
-            <td><%= employee.first_name %></td>
-            <td><%= employee.last_name %></td>
-            <td><%= employee.emp_mode %></td>
-            <td><%= employee.role %></td>
-            <td><%= employee.email %></td>
-            <td><%= employee.department %></td>
-            <td><%= employee.reporting_manager %></td>
-            <td><%= employee.job_title %></td>
-            <td><%= employee.exprerience %></td>
-            <td><%= employee.tel %></td>
-            <td><%= employee.status %></td>
-            <td><%= link_to 'Show', employee %></td>
-            <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
-            <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+    <div class="panel-body">
+         <table class="table" table-striped table-hover>
+          <thead>
+            <tr>
+              <th>Employee code</th>
+              <th>Employee ID:</th>
+              <th>Prefix</th>
+              <th>First name</th>
+              <th>Last name</th>
+              <th>Emp mode</th>
+              <th>Role</th>
+              <th>Email</th>
+              <th>Department</th>
+              <th>Reporting manager</th>
+              <th>Job title</th>
+              <th>Exprerience</th>
+              <th>Tel</th>
+              <th>Status</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <% @employees.each do |employee| %>
+              <tr>
+                <td><%= employee.employee_code %></td>
+                <td><%= employee.employee_id %></td>
+                <td><%= employee.prefix %></td>
+                <td><%= employee.first_name %></td>
+                <td><%= employee.last_name %></td>
+                <td><%= employee.emp_mode %></td>
+                <td><%= employee.role %></td>
+                <td><%= employee.email %></td>
+                <td><%= employee.department %></td>
+                <td><%= employee.reporting_manager %></td>
+                <td><%= employee.job_title %></td>
+                <td><%= employee.exprerience %></td>
+                <td><%= employee.tel %></td>
+                <td><%= employee.status %></td>
+                <td><%= link_to 'View', employee %></td>
+                <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+                <td><%= link_to 'Delete', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
   </div>
   
   <div class="panel-footer">
     <%= link_to 'New Employee', new_employee_path, class:"btn btn-success" %> 
+    <%= link_to 'Print', employees_path ,class: 'btn btn-info'%>
   </div>
+  
+ </div>
 </div>
-
 
 
 
